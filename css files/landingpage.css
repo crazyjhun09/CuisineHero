@@ -1,33 +1,107 @@
-
-.navbar{
-    background-color:#071b36;
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box; 
+    scroll-behavior: smooth;
+}
+#banner{
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color:rgba(15, 11, 37, 0.219);
+    justify-content: space-between;
+    width: 100%;
+    min-height: 8vh;
+    z-index: 9998;
+    align-items: center;
+    margin:auto;
+    top: 0;
+}
+.navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+    margin-top: 2vh;
+}
+#navtext{
+    font-family: 'Raleway';
+    font-size: 3vw;
+    color: white;
+}
+.nav-link{
+    text-decoration: none;
+    color: white;
+    display: flex;
+    list-style: none;
+    font-family: 'Krub';
 }
 .navbar-brand img{
     width: 50px;
     height: 50px;
 }
+
 #landingtop{
     position: relative;
     height:100vh;
-    background-color:#2c6e49;
+    background-image: url("https://images.unsplash.com/photo-1470549813517-2fa741d25c92?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#buffertop{
+    height: 10vh;
 }
 #top{
-    outline: white;
-    outline-style: auto;
     height: 50%;
+    align-items: center;
 }
 #bottom{
-    outline: white;
-    outline-style: auto;
-    height: 40%;
+    height: 30%;
 }
 #brandname{
     position: absolute;
     font-family: 'Raleway';
-    font-size:10vw;
+    font-size:8vw;
+    color: white;
 }
 #tagline{
     position: absolute;
     font-family: 'Krub';
     font-size: 2vw;
+    color: white;
+}
+
+#landingbot{
+    position: relative;
+    height:100vh;
+    background: linear-gradient(181deg, #fefee3, #ffc9b9, #4c95bc);
+    background-size: 600% 600%;
+
+    -webkit-animation: AnimationName 25s ease infinite;
+    -moz-animation: AnimationName 25s ease infinite;
+    -o-animation: AnimationName 25s ease infinite;
+    animation: AnimationName 25s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 79%}
+    50%{background-position:100% 22%}
+    100%{background-position:0% 79%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 79%}
+    50%{background-position:100% 22%}
+    100%{background-position:0% 79%}
+}
+@-o-keyframes AnimationName {
+    0%{background-position:0% 79%}
+    50%{background-position:100% 22%}
+    100%{background-position:0% 79%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 79%}
+    50%{background-position:100% 22%}
+    100%{background-position:0% 79%}
 }
