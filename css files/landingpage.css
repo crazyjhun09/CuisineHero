@@ -4,10 +4,7 @@
     box-sizing: border-box; 
     scroll-behavior: smooth;
 }
-/*.video-container{
-    border: white;
-    border-style: dashed;}
-*/
+
 .collapsibleNavbar{
     transition: ease 0.8s;
 }
@@ -137,32 +134,17 @@
 #landingbot{
     position: relative;
     height:100vh;
-    background: linear-gradient(181deg, #fefee3, #ffc9b9, #4c95bc);
-    background-size: 600% 600%;
-
-    -webkit-animation: AnimationName 25s ease infinite;
-    -moz-animation: AnimationName 25s ease infinite;
-    -o-animation: AnimationName 25s ease infinite;
-    animation: AnimationName 25s ease infinite;
+}
+#sectop{
+    position: relative;
+    background-color: black;
+}
+#sectop img{
+    height: 50%;
+    width:auto;
+}
+#secbot{
+    position: relative;
+    background-color: green;
 }
 
-@-webkit-keyframes AnimationName {
-    0%{background-position:0% 79%}
-    50%{background-position:100% 22%}
-    100%{background-position:0% 79%}
-}
-@-moz-keyframes AnimationName {
-    0%{background-position:0% 79%}
-    50%{background-position:100% 22%}
-    100%{background-position:0% 79%}
-}
-@-o-keyframes AnimationName {
-    0%{background-position:0% 79%}
-    50%{background-position:100% 22%}
-    100%{background-position:0% 79%}
-}
-@keyframes AnimationName {
-    0%{background-position:0% 79%}
-    50%{background-position:100% 22%}
-    100%{background-position:0% 79%}
-}
