@@ -37,33 +37,40 @@
                     </li>
                 </ul> 
         </div>
-        <p class="navbar-center d-none d-lg-block d-xl-block" id="navtext">CuisineHero</p>
+        <p class="navbar-center d-none d-md-block d-lg-block d-xl-block" id="navtext">CuisineHero</p>
     </nav>
 </header>
 
 <body>
-    <div class="container-fluid" id="landingtop">
-        <div class="row" id="buffertop">
-            <div class="col-12 text-center col-sm-3">
+    <div class="video-container">
+        <div class="overlay"></div>
+        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+            <source src="https://stream.mux.com/YooBB1uTQp8lHKATUD6G8o6ZGqPUzjxd/high.mp4?token=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InQ5UHZucm9ZY0hQNjhYSmlRQnRHTEVVSkVSSXJ0UXhKIn0.eyJleHAiOjE2MjIxMTM3MjUsImF1ZCI6InYiLCJzdWIiOiJZb29CQjF1VFFwOGxIS0FUVUQ2RzhvNlpHcVBVemp4ZCJ9.E3qXV41zu8Z1uMZmJFAP_yZLqzpCYBN7K8eEPp3x3-l4S0fU3LE5W9IpvCfFaKC9lo9auPZOrqYB1lRL9bZNd3zUlgzmEH_YuENnEy_tOg0HL6CwqQtHXvkcx0e3AdAsm9xN4D5DrB_owevCamc1ZzDL0QJz9FU5cyjUXEE0CwsGuOG1wtAMRGoUvrJc8TRWDMo_hOEi38kAgLk_YMIkFZj9pufiQ10xDWHQkQXfwmkOheifQ95FBRsU6OSIe4ieumNYD0WIIu6gfDdysS5w728v5vOifpy9f2tMGLjKe-tEcCbmaZbdUMkZ5_TpXtuLHj-ZVAxuaz5-khXtJdovAw" type="video/mp4">
+          </video>
+          <div class="container-fluid h-100" id="landingtop">
+            <div class="row" id="buffertop">
+                <div class="col-mid-auto col-sm-3"></div>
             </div>
-        </div>
-        <div class="row justify-content-between" id="top">
-            <div class="col-12 text-center col-sm-3" id="brandname">
-                Tagline, Impactful. 
+            <div class="row d-flex justify-content-center" id="top">
+                <div class="col-lg-12 text-center col-sm-12" id="brandname">
+                    <h1 class="font-weight-bold" id="tagline">Your #1 Kitchen Buddy!</h1>
+                    <p id="desc">Plan your meals intelligently with CuisineHero.</p> 
+                </div>
             </div>
-        </div>
-        <div class="row" id="bottom">
-            <div class="col-12 text-center col-sm-3" id="tagline">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+            <div class="row" id="bottom">
+                <div class="col-lg-12 text-center col-sm-12">
+                    <form action="Search/search.html" method="POST">
+                        <button type="submit" class="btn" id="searchbtn">
+                            <span id="srch">Search Now</span>
+                        </button>
+                        <!--babaguhin ung mema.html-->
+                    </form>
+                </div>
             </div>
-        </div>
-        <div class="text-center">
-            <form action="Search/search.html" method="POST">
-                <button type="submit" class="btn btn-outline-warning">Search Now</button>
-                <!--babaguhin ung mema.html-->
-            </form>
         </div>
     </div>
+   
+    
     <!--malawak na scroll down ng features-->
     <div class="container-fluid" id="landingbot">
         <div class="text-center">
