@@ -4,10 +4,10 @@
     box-sizing: border-box; 
     scroll-behavior: smooth;
 }
-.row{
+/*.video-container{
     border: white;
     border-style: dashed;}
-
+*/
 .collapsibleNavbar{
     transition: ease 0.8s;
 }
