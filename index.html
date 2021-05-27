@@ -5,13 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <head>
-    
+    <link rel="stylesheet" href="">
     <link rel="shortcut icon" href="">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="">
 </head>
 <header>
     <nav class="navbar navbar-expand-md bg-dark">
@@ -66,19 +65,19 @@
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <p>Sign-Up Kuno :V</p>
+                    <p>Sign-Up</p>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
                     <form action="" method="post">
-                        <input type="text" name="name" id="" placeholder="Name">
-                        <input type="text" name="name" id="" placeholder="Name">
-                        <input type="text" name="name" id="" placeholder="Name">
-                        <input type="email" name="email" id="" placeholder="E-mail">
-                        <input type="password" name="password" id="" placeholder="Password">
-                        <input type="password" name="password" id="" placeholder="Confirm Password">
+                        <input type="text" name="firstname" placeholder="First Name" autocomplete="false" required>
+                        <input type="text" name="lastname" placeholder="Last Name" autocomplete="false" required>
+                        <input type="email" name="email" placeholder="E-mail" autocomplete="false" required>
+                        <input type="password" name="password" id="pw1" placeholder="Password" autocomplete="false" required>
+                        <input type="password" id="pw2" placeholder="Confirm Password" autocomplete="false">
+                        <br><span id="match"></span><br>
+                        <input type="submit" value="Sign-Up" id="block">
                     </form>
-                    <button type="submit">Sign-Up</button>
 
                 </div>
                 <div class="modal-footer">
@@ -93,22 +92,20 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <div id="LogFirst"></div>
-                    <div>Login Kuno :V</div>
+                    <div>Login</div>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
-                    <form action="" method="post">
-                        <input type="email" name="email" id="" placeholder="E-mail">
-                        <input type="password" name="password" id="" placeholder="Password">
+                    <form action="Login.php" method="POST">
+                        <input type="email" name="LogEmail" placeholder="E-mail" autocomplete="false">
+                        <input type="password" name="LogPassword" placeholder="Password" autocomplete="false">
+                        <input type="submit" value="Login">
                     </form>
-                    <button type="submit">Login</button>
-
                 </div>
                 <div class="modal-footer">
                     Create an account?<button type="button" class="btn btn-outline-warning" data-dismiss="modal"
                         data-toggle="modal" data-target="#Sign-Up">Sign-Up</button>
-                </div>
-            </div>
+            </div></div>
         </div>
     </div>
 </body>
@@ -126,4 +123,15 @@
             $("#LogFirst").empty();
         });
     });
+    $('#block').prop('disabled', true);
+    $('#pw1, #pw2').on('keyup', function () {
+        if ($('#pw1').val() == $('#pw2').val() && $('#pw1').val().length > 0){
+            $('#match').html('Password matched').css('color', 'green');
+            $('#block').prop('disabled', false);
+              }
+    else{
+            $('#match').html('Not Matching').css('color', 'red');
+            $('#block').prop('disabled', true);
+     }
+});
 </script>
