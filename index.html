@@ -125,13 +125,13 @@
     });
     $('#block').prop('disabled', true);
     $('#pw1, #pw2').on('keyup', function () {
-        if ($('#pw1').val() == $('#pw2').val() && $('#pw1').val().length > 0){
+    if ($('#pw1').val() == $('#pw2').val() && $('#pw1').val().length > 0){
             $('#match').html('Password matched').css('color', 'green');
             $('#block').prop('disabled', false);
-              }
+    }
     else{
             $('#match').html('Not Matching').css('color', 'red');
             $('#block').prop('disabled', true);
-     }
+    }
 });
 </script>
