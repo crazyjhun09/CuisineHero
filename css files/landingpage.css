@@ -4,6 +4,10 @@
     box-sizing: border-box; 
     scroll-behavior: smooth;
 }
+.row{
+    border: white;
+    border-style: dashed;}
+
 #banner{
     position: fixed;
     display: flex;
@@ -28,6 +32,7 @@
     font-family: 'Raleway';
     font-size: 3vw;
     color: white;
+    transition: top .6s;
 }
 .nav-link{
     text-decoration: none;
@@ -40,16 +45,45 @@
     width: 50px;
     height: 50px;
 }
-
-#landingtop{
+.video-container {
     position: relative;
-    height:100vh;
-    background-image: url("https://images.unsplash.com/photo-1470549813517-2fa741d25c92?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80");
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+    background-color: black;
+    height: 100vh;
+    min-height: 25rem;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .video-container video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+  }
+  
+  #landingtop {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 1;
+  }
 #buffertop{
     height: 10vh;
 }
@@ -62,14 +96,17 @@
 }
 #brandname{
     position: absolute;
+}
+#desc{
+    position: relative;
     font-family: 'Raleway';
-    font-size:8vw;
+    font-size:2vw;
     color: white;
 }
 #tagline{
-    position: absolute;
+    position: relative;
     font-family: 'Krub';
-    font-size: 2vw;
+    font-size: 6vw;
     color: white;
 }
 

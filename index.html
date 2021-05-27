@@ -42,28 +42,35 @@
 </header>
 
 <body>
-    <div class="container-fluid" id="landingtop">
-        <div class="row" id="buffertop">
-            <div class="col-12 text-center col-sm-3">
+    <div class="video-container">
+        <div class="overlay"></div>
+        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+            <source src="videos/video.mp4" type="video/mp4">
+          </video>
+          <div class="container-fluid h-100" id="landingtop">
+            <div class="row" id="buffertop">
+                <div class="col-mid-auto col-sm-3"></div>
             </div>
-        </div>
-        <div class="row justify-content-between" id="top">
-            <div class="col-12 text-center col-sm-3" id="brandname">
-                Tagline, Impactful. 
+            <div class="row flex justify-content-center" id="top">
+                <div class="col-lg-12 text-center col-sm-12" id="brandname">
+                    <h1 class="font-weight-bold" id="tagline">Your #1 Kitchen Buddy!</h1>
+                </div>
             </div>
-        </div>
-        <div class="row" id="bottom">
-            <div class="col-12 text-center col-sm-3" id="tagline">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+            <div class="row" id="bottom">
+                <div class="col-lg-6 text-center col-sm-3" id="desc">
+                       <p>Plan your meals intelligently with CuisineHero.</p>  
+                </div>
+                <div class="col-lg-6 text-center col-sm-3">
+                    <form action="Search/search.html" method="POST">
+                        <button type="submit" class="btn btn-outline-warning">Search Now</button>
+                        <!--babaguhin ung mema.html-->
+                    </form>
+                </div>
             </div>
-        </div>
-        <div class="text-center">
-            <form action="Search/search.html" method="POST">
-                <button type="submit" class="btn btn-outline-warning">Search Now</button>
-                <!--babaguhin ung mema.html-->
-            </form>
         </div>
     </div>
+   
+    
     <!--malawak na scroll down ng features-->
     <div class="container-fluid" id="landingbot">
         <div class="text-center">
