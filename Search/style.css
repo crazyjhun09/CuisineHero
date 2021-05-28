@@ -24,6 +24,10 @@ a.navlink{
     left: 5px;
     top:7px;
 }
+.dpdown:hover{
+    background-color: black;
+    color: white;
+}
 .select{
     position:relative;
 }
