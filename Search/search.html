@@ -50,25 +50,36 @@
 </div>
 </div><br>
 <div class="col-12 d-lg-none">
-    <form action="" method="get">
-        <input type="text" class="smd" name="Search" id="" placeholder="Type your ingredient">
-        <div class="dropdown dpdown">
-            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <a class="dropdown-item ingr" href="#">Ingredients</a>
-                <a class="dropdown-item opt" href="#">Options</a>
-            </div>
+    <div class="row">
+    <div class="dropdown col-1">
+        <a class="btn dropdown-toggle dpdown" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <a class="dropdown-item ingr" href="#">Ingredients</a>
+            <a class="dropdown-item opt" href="#">Options</a>
         </div>
-        <input type="submit" value="Icon">
-    </form>
+    </div>
+    <h1 class="col-9 select"></h1>
+</div>
 </div>
 <div class="row" id="accordion">
 <div class="collapse ingre1 show" data-parent="#accordion">
     <div class="col-12 d-none d-lg-block">
-        <form action="" method="get">
-            <input type="text" name="Search" id="" placeholder="Type your ingredient">
-            <input type="submit" value="Icon">
+        <form action="" method="get" id="form">
+            <div class="container-fluid">
+            <div class="row">
+            <input type="text" class="col-10" name="Search" id="" placeholder="Type your ingredient">
+            <a class="col-2" href="#" onclick="document.getElementById('form').submit()"> <img src="search.png"></a>
+        </div></div>
         </form>
+    </div>
+    <div class="col-12 d-lg-none">
+    <form action="" method="get" id="form">
+        <div class="container-fluid">
+        <div class="row">
+        <input type="text" class="col-10" name="Search" id="" placeholder="Type your ingredient">
+        <a class="col-2" href="#" onclick="document.getElementById('form').submit()"> <img src="search.png"></a>
+    </div></div>
+    </form>
     </div>
     <div class="col-12">
         <h2>Your Pantry:</h2>
@@ -124,6 +135,9 @@
 </body>
 </html>
 <script>
+    $(document).ready(function(){
+    $(".select").html('Ingredients');
+});
 $(document).ready(function(){
   $(".ingr").click(function(){
     $(".ingre1").collapse('show');
@@ -132,6 +146,16 @@ $(document).ready(function(){
 $(document).ready(function(){
   $(".opt").click(function(){
     $(".opt1").collapse('show');
+  });
+});
+$(document).ready(function(){
+  $(".ingr").click(function(){
+    $(".select").html('Ingredients');
+  });
+});
+$(document).ready(function(){
+  $(".opt").click(function(){
+    $(".select").html('Options');
   });
 });
 
