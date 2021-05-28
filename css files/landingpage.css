@@ -130,21 +130,24 @@
     padding:15px;
     transition: ease .8s;
 }
-
-#landingbot{
+#bot{
     position: relative;
-    height:100vh;
+    height: 100vh;
+    width: 100%;
 }
-#sectop{
+#laptop{
     position: relative;
-    background-color: black;
+    max-height: 70vh;
+    width: 60vw;
+    left: -10%;
+    top: 20%;
+    object-fit: contain;
 }
-#sectop img{
-    height: 50%;
-    width:auto;
+#phone{
+    position: absolute;
+    max-height: 40vh;
+    width: 20vw;
+    left: 80%;
+    top: 50%;
+    object-fit: contain;
 }
-#secbot{
-    position: relative;
-    background-color: green;
-}
-
