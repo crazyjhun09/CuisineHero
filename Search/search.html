@@ -87,8 +87,18 @@
     </form>
     </div>
     <div class="col-12">
-        <h2>Your Pantry:</h2>
+        <div class="container-fluid">
+        <div class="row pantry">
+        <h2 class="col-10">Your Pantry:</h2>
+            <button class="btn d-lg-none dpdown1 col-2" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                <img src="down-arrow.png">
+            </button>
+            <div class="collapse d-lg-none" id="collapseExample">
+                test1<!--JQ + DB Here-->
+            </div>
         <!--JQ + DB Here-->
+    </div>
+    </div>
     </div>
     <div class="col-12">
         <h2>Smart Suggestions</h2>
@@ -163,5 +173,7 @@ $(document).ready(function(){
     $(".select").html('Options');
   });
 });
-
+$(".dpdown1").click(function(){
+  $(".dpdown1").toggleClass("downarrow");
+});
 </script>
