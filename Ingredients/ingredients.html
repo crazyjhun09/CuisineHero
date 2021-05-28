@@ -12,18 +12,18 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="style.css">
 </head>
 <header>
-  <nav class="navbar navbar-expand-md bg-dark">
+  <nav class="navbar navbar-expand-md">
     <!--pabura nalang nung bg-dark, pantest lang ng burjer un-->
     <a class="navbar-brand" href="#">
       Logo
     </a>
-    <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
       <img src="..\Images\burjer.png" width="30" height="20">
     </button>
-    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <div class="collapse navbar-collapse navbar-dark" id="collapsibleNavbar">
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link" id="Feed" href="#" data-toggle="modal" data-target="#Login">Feed</a>
@@ -38,34 +38,72 @@
   </nav>
 </header>
 <body>
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-12 col-md-5">Picture ng ulam</div>
-            <div class="col-12 col-md-7">
-                <div class="col-12">Dish Title</div>
-                <div class="row">
-                    <div class="col-md-2 col-4">Pic1</div>
-                    <div class="col-md-2 col-4">Pic2</div>
-                    <div class="col-md-2 col-4">Pic3</div>
+          <div class="col-1 d-none d-md-block">
+            <div class="container-fluid position-fixed icons">
+              <div class="row">
+                <div class="col-12"><a href=""><img src="like.png"></a></div>
+                <div class="col-12"><a href=""><img src="share.png"></a></div>
+                <div class="col-12"><a href=""><img src="comment.png"></a></div>
+            </div></div>
+          </div>
+            <div class="col-12 col-md-5">
+                    Picture ng ulam
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="container-fluid">
+                <h1 class="col-12 Recipe-Name">
+                  Pangalan nung ulam
+                </h1>
+                <div class="col-12 Indention-Ing">
+                  Preparation Time: <span>wala pa</span>
                 </div>
-                <div class="col-12">Ingredients</div>
-                <div class="col-12">Nutritional Value</div>
+                <div class="col-12 Indention-Ing">
+                  Cooking Time: <span>wala pa</span>
+                </div>
+                <div class="col-12 Indention-Ing">
+                  Total Time: <span>wala pa</span>
+                </div>
+                <div class="col-12 Indention-Ing">
+                  Servings: <span>wala pa</span>
+                </div>
+                <h2 class="col-12 Ingredient-Title">
+                  Pangalan nung ulam
+                </h2>
+                <div class="col-12 Indention-Ing">
+                  - <span>Ingredient A</span>
+                </div><!--Append This for Ingredients-->
+                <h2 class="col-12 Ingredient-Title">
+                  Nutritional Information
+                </h2>
+              </div>
+            </div>
+            </div>
+            <div class="row">
+              <div class="col-1 d-none d-md-block"></div>
+              <div class="col-md-5 col-12">Video Here</div>
+              <div class="col-md-6 col-12"><h2 class="Ingredient-Title">You might also like...</h2>
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-3 card">
+                      <div class="card-body">Content</div>
+                      <div class="card-footer">Footer</div>
+                    </div>
+                    <div class="col-3 card">
+                      <div class="card-body">Content</div>
+                      <div class="card-footer">Footer</div>
+                    </div>
+                    <div class="col-3 card">
+                      <div class="card-body">Content</div>
+                      <div class="card-footer">Footer</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
         </div>
-        <div class="col-12">Procedures</div>
-        <div class="row">
-            <div class="col-12 col-md-6">Procedure Text</div>
-            <div class="col-12 col-md-6">Video</div>
-        </div>
-        <div class="col-12">You might also like...</div>
-        <div class="row"><!--baguhin nalang to kung gusto-->
-            <div class="col-12 col-md-3">Pic1</div>
-            <div class="col-12 col-md-3">Pic2</div>
-            <div class="col-12 col-md-3">Pic3</div>
-            <div class="col-12 col-md-3">Pic4</div>
-        </div>
-    </div>
-</body>
+</body> <br><br><br><br>
 <footer>
     mga detalye natin
 </footer>

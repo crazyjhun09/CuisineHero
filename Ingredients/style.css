@@ -1,0 +1,29 @@
+.navbar{
+    position: relative;
+}
+.icons a img{
+    border: 1px solid black;
+    padding: 5px;
+    width: 50px;
+    border-radius: 14px;
+    margin: 10px;
+}
+.icons{
+    position: absolute;
+    top: 300px;
+}
+.Recipe-Name{
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+    padding-top: 30px;
+    width: 500px;
+}
+.Indention-Ing{
+    text-indent: 40px;
+}
+.Ingredient-Title{
+    padding: 10px;
+}
+.navbar{
+    background-color: black;
+}
