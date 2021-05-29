@@ -98,3 +98,27 @@ iframe{
     width: 500px;
     height: 300px;
 }
+#foodImg{
+    position: absolute;
+    top: 200px;
+    width: 40vw;
+    max-height: 900px;
+}
+@media screen and (max-width: 768px) {
+    .adjust{
+        margin-top: 500px;
+    }
+    #foodImg{
+        left: 1px;
+        top: 40px;
+        width: auto;
+        max-width: 525px;
+        height: 70vh;
+    }
+  }
+.spacer{
+    margin-bottom: 200px;
+}
+.icons{
+    z-index: 1;
+}
