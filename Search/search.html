@@ -50,8 +50,11 @@
 <div class="col-12 col-md-3 d-none d-lg-block">
     <input type="button" class="btn ingr btn-outline-dark" value="Ingredients">
 </div>
-<div class="col-12 col-md-9 d-none d-lg-block">
+<div class="col-12 col-md-3 d-none d-lg-block">
     <input type="button" class="btn opt btn-outline-dark" value="Options">
+</div>
+<div class="col-12 col-md-6 d-none d-lg-block"> 
+    <input type="button" class="btn recp btn-outline-dark" value="Recipe Name">
 </div>
 </div><br>
 <div class="col-12 d-lg-none">
@@ -61,6 +64,7 @@
         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
             <a class="dropdown-item ingr" href="#">Ingredients</a>
             <a class="dropdown-item opt" href="#">Options</a>
+            <a class="dropdown-item recp" href="#">Recipe Name</a>
         </div>
     </div>
     <h1 class="col-9 select"></h1>
@@ -68,23 +72,14 @@
 </div>
 <div class="row" id="accordion">
 <div class="collapse ingre1 show" data-parent="#accordion">
-    <div class="col-12 d-none d-lg-block">
+    <div class="col-12">
         <form action="" method="get" id="form">
-            <div class="container-fluid">
+            <div class="container-fluid">   
             <div class="row">
             <input type="text" class="col-10" name="Search" id="" placeholder="Type your ingredient">
             <a class="col-2" href="#" onclick="document.getElementById('form').submit()"> <img class="searchbtn" src="search.png"></a>
         </div></div>
         </form>
-    </div>
-    <div class="col-12 d-lg-none">
-    <form action="" method="get" id="form">
-        <div class="container-fluid">
-        <div class="row">
-        <input type="text" class="col-10" name="Search" id="" placeholder="Type your ingredient">
-        <a class="col-2" href="#" onclick="document.getElementById('form').submit()"> <img class="searchbtn"src="search.png"></a>
-    </div></div>
-    </form>
     </div>
     <div class="col-12">
         <div class="container-fluid">
@@ -105,6 +100,18 @@
         <!--JQ + DB Here-->
     </div>
 </div>
+<div class="collapse recp1" data-parent="#accordion">
+    <div class="col-12">
+        <form action="" method="get" id="form">
+            <div class="container-fluid">   
+            <div class="row">
+            <input type="text" class="col-10" name="Search" id="" placeholder="Type the name of the Recipe">
+            <a class="col-2" href="#" onclick="document.getElementById('form').submit()"> <img class="searchbtn" src="search.png"></a>
+        </div></div>
+        </form>
+    </div>
+</div>
+
 <div class="collapse opt1" data-parent="#accordion">
     <div class="col-12">
         <h2>Categories</h2>
@@ -164,6 +171,11 @@ $(document).ready(function(){
   });
 });
 $(document).ready(function(){
+  $(".recp").click(function(){
+    $(".recp1").collapse('show');
+  });
+});
+$(document).ready(function(){
   $(".ingr").click(function(){
     $(".select").html('Ingredients');
   });
@@ -171,6 +183,11 @@ $(document).ready(function(){
 $(document).ready(function(){
   $(".opt").click(function(){
     $(".select").html('Options');
+  });
+});
+$(document).ready(function(){
+  $(".recp").click(function(){
+    $(".select").html('Recipe Name');
   });
 });
 $(".dpdown1").click(function(){
