@@ -73,31 +73,31 @@
     
     <!--malawak na scroll down ng features-->
 <div class="container-fluid" id="landingbot">
-    <div class="row d-flex justify-content-center">
-        <div class="col-lg-7 col-sm-12">
-            <img id="laptop" class="img-fluid" src="images/laptop feed.png">
-            <img id="phone" class="img-fluid" src="images/phone feed.png">
+    <div class="row" id="buffertop">
+        <div class="col-mid-auto col-sm-3"></div>
+    </div>
+    <div class="row d-flex" >
+        <div class="col-lg-8 col-sm-12 justify-content-center" id="botpic">
+            <div class="images" >
+                <div id="img1">
+                    <img id="laptop" src="images/laptop feed.png">
+                </div>
+            </div>
         </div>
-        <div class="col-lg-5 col-sm-12">
-            <h1>Share your recipes with the Community.</h1>
-            <p>With the Recipe Feed, you can post your own recipes, and view recipes from your community.</p>
+        <div class="col-lg-4 col-sm-12" id="bottext">
+            <div class="textbot">
+                <h1 class="font-weight-bold">Share your recipes with the Community.</h1>
+                <p>With the Recipe Feed, you can post your own recipes, and view recipes from your community.</p>
+            </div>
+            <div class="text-center">
+                <button type="button" class="btn" data-toggle="modal" data-target="#Sign-Up"
+                    id="Sign"><span id="signup">Go to your Feed</span></button>
+                <!--pasabi nalang if babaguhin to :V-->
+            </div>
+            
         </div>
     </div>
 </div>
-
-
-<div class="text-center">
-    <button type="button" class="btn btn-outline-warning" data-toggle="modal" data-target="#Sign-Up"
-        id="Sign">Sign-Up</button>
-    <!--pasabi nalang if babaguhin to :V-->
-</div>
-
-
-
-
-
-
-
     <div class="modal fade" id="Sign-Up">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
@@ -150,7 +150,18 @@
     mga detalye natin
 </footer>
 </html>
-
+<script>
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+    var currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+        document.getElementById("banner").style.top = "0";
+      } else {
+        document.getElementById("banner").style.top = "-110px";
+      }
+      prevScrollpos = currentScrollPos;
+    }
+</script>
 <script>
     $(document).ready(function () {
         $("#Feed").click(function () {

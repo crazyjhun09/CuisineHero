@@ -4,10 +4,6 @@
     box-sizing: border-box; 
     scroll-behavior: smooth;
 }
-
-.collapsibleNavbar{
-    transition: ease 0.8s;
-}
 #banner{
     position: fixed;
     display: flex;
@@ -21,6 +17,7 @@
     align-items: center;
     margin:auto;
     top: 0;
+    transition: ease 0.8s;
 }
 .navbar-center {
     position: absolute;
@@ -68,7 +65,6 @@
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
   }
-  
   #landingtop {
     position: relative;
     z-index: 2;
@@ -96,6 +92,7 @@
 #brandname{
     position: absolute;
 }
+
 #desc{
     position: relative;
     font-family: 'Raleway';
@@ -107,7 +104,35 @@
     font-family: 'Krub';
     font-size: 6vw;
     color: white;
+    -webkit-animation: focus-in-expand 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: focus-in-expand 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
+@-webkit-keyframes focus-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  @keyframes focus-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
 #searchbtn{
     border: white;
     border-style: solid;
@@ -130,16 +155,108 @@
     padding:15px;
     transition: ease .8s;
 }
+#landingbot{
+    height:100vh;
+
+}
+#botpic{
+    object-fit: contain;
+}
 #laptop{
     position: relative;
-    height: 500px;
-    width: 850px;
-    object-fit: contain;
+    top:20px;
+    width: 100%;
+    height: auto;
+    -webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
-#phone{
-    height: 350px;
-    width: 300px;
-    bottom: -10px;
-    left: 600px;
-    object-fit: contain;
+@-webkit-keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+.textbot{
+    position: relative;
+    padding: 1vw;
+    right: 50px;
+    -webkit-animation: text-pop-up-right 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: text-pop-up-right 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
+@-webkit-keyframes text-pop-up-right {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+      text-shadow: none;
+    }
+    100% {
+      -webkit-transform: translateX(50px);
+              transform: translateX(50px);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+    }
+  }
+  @keyframes text-pop-up-right {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+      text-shadow: none;
+    }
+    100% {
+      -webkit-transform: translateX(50px);
+              transform: translateX(50px);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+    }
+  }
+#bottext h1{
+    font-family: 'Krub';
+    font-size: 5vw;
+}
+#bottext p{
+    font-family: 'Krub';
+    font-size: 2vw;
+}
+@media (max-width: 992px) {
+    .textbot{
+        position: relative;
+        text-align: center;
+    }
+}
+#Sign{
+    border: black;
+    border-style: solid;
+    border-radius: 100px;
+    text-decoration: none;
+    margin: 2vh;
+    transition: ease .8s;
+}
+#Sign:hover{
+    background-color: rgb(0, 0, 0);;
+}
+#Sign:hover #signup{
+    color:rgb(255, 255, 255);
+    font-size: 25px;
+}
+#signup{
+    font-family: 'Raleway';
+    font-size:20px;
+    color:rgb(0, 0, 0);
+    padding:15px;
+    transition: ease .8s;
+}
+
