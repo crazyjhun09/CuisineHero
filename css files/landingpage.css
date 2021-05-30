@@ -4,6 +4,7 @@
     box-sizing: border-box; 
     scroll-behavior: smooth;
 }
+/* navbar */
 #banner{
     position: fixed;
     display: flex;
@@ -42,6 +43,8 @@
     width: 50px;
     height: 50px;
 }
+
+/* video background */
 .video-container {
     position: relative;
     background-color: black;
@@ -50,7 +53,6 @@
     width: 100%;
     overflow: hidden;
   }
-  
   .video-container video {
     position: absolute;
     top: 50%;
@@ -98,12 +100,14 @@
     font-family: 'Raleway';
     font-size:2vw;
     color: white;
+    transition: ease .8s;
 }
 #tagline{
     position: relative;
     font-family: 'Krub';
     font-size: 6vw;
     color: white;
+    transition: ease .8s;
     -webkit-animation: focus-in-expand 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	        animation: focus-in-expand 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
@@ -155,10 +159,21 @@
     padding:15px;
     transition: ease .8s;
 }
+@media (max-width: 992px) {
+  #desc{
+    text-align: center;
+    font-family: 'Raleway';
+    font-size:15px;
+  }
+  #tagline{
+    text-align: center;
+    font-size: 50px;
+  }
+}
+/* landing second section */
 #landingbot{
     position: relative;
-    height:100vh;
-    border: dashed;
+    height:110vh;
 }
 #botpic{
     object-fit: contain;
@@ -191,6 +206,7 @@
     position: relative;
     padding: 1vw;
     right: 50px;
+    transition: ease .8s;
     -webkit-animation: text-pop-up-right 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	        animation: text-pop-up-right 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
@@ -232,12 +248,6 @@
     font-family: 'Krub';
     font-size: 2vw;
 }
-@media (max-width: 992px) {
-    .textbot{
-        position: relative;
-        text-align: center;
-    }
-}
 #Sign{
     border: black;
     border-style: solid;
@@ -260,34 +270,67 @@
     padding:15px;
     transition: ease .8s;
 }
+@media (max-width: 992px) {
+ #landingbot{
+   height: max-content;
+ }
+}
+
+/* footer */
 .footer{
   position: relative;
-  width: 100vw;
+  height: max-content;
   background-color: black;
 }
 .footbrnd h1{
-  position: absolute;
-  left:130px;
-  top: 30px;
+  padding-top: 30px;
   color: white;
   font-size: 50px;
   font-family: 'Raleway';
 }
 .footbrnd p{
-  padding-top: 10vh;
   color: white;
   font-size: 15px;
   font-family: 'Krub';
   margin: 6vh;
 }
-.footerlogo{
-  position: absolute;
-  left:70px;
-  top: 33px;
-  width: 50px;
-  height: 50px;
+.socials ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.socials li{
+  list-style: none;
+  margin: 1vw;
+  display:inline;
+}
+.socials a{
+  text-align: center;
+}
+.socicon{
+  filter: invert(100);
+  width:50px;
+  height: auto;
+}
+.colh1{
+  font-family: 'Krub';
+  font-size: 40px;
+  color: white;
+  padding-top: 50px;
 }
 .column{
-  border: white;
-  border-style: dashed;
+  text-align: center;
+  align-content: center;
+}
+.contacts li{
+ list-style: none;
+ font-family: 'Krub';
+ color: white;
+}
+
+
+
+@media (max-width: 992px) {
+  
 }
