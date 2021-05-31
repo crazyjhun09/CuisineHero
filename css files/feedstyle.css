@@ -14,7 +14,7 @@
     justify-content: space-between;
     width: 100%;
     min-height: 8vh;
-    z-index:9999;
+    z-index:9998;
     align-items: center;
     margin:auto;
     top: 0;
@@ -143,7 +143,19 @@
     padding:15px;
     transition: ease .8s;
 }
-
+.cursor{
+    width: 5vw;
+    height: 5vw;
+    border: 2px solid black;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    pointer-events:none;
+    transition: .3s ease;
+    transition-property: transform;
+    transform-origin: 100% 100%;
+}
 .card{
     border: solid black;
     height: max-content;
@@ -194,13 +206,12 @@ cursor: pointer;
 }
 @media (max-width: 1295px) {
     .foodpic{
-    width:40vw;
-    height:auto;
+        width:40vw;
+        height:auto;
     }
 }
 .community{
     padding: 20px;
-    
 }
 .comcard{
     text-align: center;
