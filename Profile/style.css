@@ -70,6 +70,7 @@
     position: absolute;
     top: 350px;
     left: 34vw;
+    width: 40vw;
 }
 .recp{
     text-align: left;
@@ -79,13 +80,10 @@
     left: 35vw;
     top: 390px;
     text-align: left;
-    width: 90vw;
+    width: 35vw;
 }
 button.btn div{
     width: 105px;
-    position: absolute;
-    left: 77vw;
-    top: 250px;
     border-radius: 100px;
     color: white;
     background-color: black;
@@ -94,6 +92,11 @@ button.btn div{
 button.btn div:hover{
     filter: invert(100);
     transition: ease-in-out 0.2s;
+}
+button.btn#Edit{
+    position: absolute;
+    left: 77vw;
+    top: 355px;
 }
 .spacing{
     margin-top: 360px;
@@ -107,6 +110,13 @@ button.btn div:hover{
 }
 .tab1 a{
     color: black;
+}
+.options{
+    display: block;
+    text-align: left;
+}
+#croppie-demo1{
+    height: 250px;
 }
 @media screen and (max-width: 768px) {
     .tab1 a.active{
@@ -123,9 +133,10 @@ button.btn div:hover{
     }
     button.btn div{
         position:static;
-        margin-left: auto;
-        margin-right: auto;
+    }
+    button.btn{
         display: block;
+        margin: auto;
     }
     .tab1{
         margin-top: 0;
@@ -158,5 +169,6 @@ button.btn div:hover{
         position: static;
         text-align: center;
         margin: auto;
+        width: 500px;
     }
   }
