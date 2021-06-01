@@ -38,3 +38,125 @@
     width: 50px;
     height: 50px;
 }
+.navbar{
+    position: relative;
+}
+#picbanner{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.picban{
+    position:absolute;
+    z-index: -1;
+}
+.dispic{
+    width: 52vw;
+    position:absolute;
+    top: 270px;
+    z-index: 1;
+}
+.dispic img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 500px;
+    border: 1px solid black;
+    z-index: 1;
+}
+.profile-name{
+    display: block;
+    margin: auto;
+    position: absolute;
+    top: 350px;
+    left: 34vw;
+}
+.recp{
+    text-align: left;
+}
+.accnos{
+    position: absolute;
+    left: 35vw;
+    top: 390px;
+    text-align: left;
+    width: 90vw;
+}
+button.btn div{
+    width: 105px;
+    position: absolute;
+    left: 77vw;
+    top: 250px;
+    border-radius: 100px;
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+}
+button.btn div:hover{
+    filter: invert(100);
+    transition: ease-in-out 0.2s;
+}
+.spacing{
+    margin-top: 360px;
+    border-top: 1px solid grey;
+    width: 500px;
+}
+.tab1 a.active{
+    border-top: 3px solid black !important;
+    transition: ease-in-out 0.2s;
+    border-radius: 0px;
+}
+.tab1 a{
+    color: black;
+}
+@media screen and (max-width: 768px) {
+    .tab1 a.active{
+        border-top: 0px none !important;
+        transition: ease-in-out 0.2s;
+        border-bottom: 3px solid black !important;
+    }
+    .dispic{
+        position:static;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        margin-top: 170px;
+    }
+    button.btn div{
+        position:static;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+    .tab1{
+        margin-top: 0;
+        border-top: 0px;
+        border-bottom: 1px solid grey;
+        width: 100px;
+    }
+    .tab1 a img{
+        margin: auto;
+    }
+    .spacing{
+        margin-top: 0;
+        border-top: 0px;
+        width: 500px;
+    }
+    .dispic img{
+        z-index: 1;
+    }
+    .picban{
+        right: 20px;
+    }
+    .profile-name{
+        position: static;
+        text-align: center;
+    }
+    .bud{
+        text-align: right;
+    }
+    .accnos{
+        position: static;
+        text-align: center;
+        margin: auto;
+    }
+  }
