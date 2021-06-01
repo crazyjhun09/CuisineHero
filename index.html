@@ -30,7 +30,7 @@
                         <a class="nav-link" id="Feed" href="#" data-toggle="modal" data-target="#Login">Feed</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Profile</a>
+                        <a class="nav-link" href="#">Search</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">About</a>
@@ -51,10 +51,10 @@
             <div class="row" id="buffertop">
                 <div class="col-mid-auto col-sm-3"></div>
             </div>
-            <div class="row d-flex justify-content-center" id="top">
+            <div class="row d-flex justify-content-center" id="top" >
                 <div class="col-lg-12 text-center col-sm-12" id="brandname">
                     <h1 class="font-weight-bold" id="tagline">Your #1 Kitchen Buddy!</h1>
-                    <p id="desc">Plan your meals intelligently with CuisineHero.</p> 
+                    <p id="desc">View delicious recipes and plan your meals smartly with with CuisineHero.</p> 
                 </div>
             </div>
             <div class="row" id="bottom">
@@ -70,7 +70,6 @@
         </div>
     </div>
    
-    
     <!--malawak na scroll down ng features-->
 <div class="container-fluid" id="landingbot">
     <div class="row" id="buffertop">
@@ -191,6 +190,14 @@
       }
       prevScrollpos = currentScrollPos;
     }
+
+    import LocomotiveScroll from "https://cdn.skypack.dev/locomotive-scroll";
+
+    const scroller = new LocomotiveScroll({
+    el: document.querySelector("[data-scroll-container]"),
+    smooth: true
+});
+    
 </script>
 <script>
     $(document).ready(function () {
