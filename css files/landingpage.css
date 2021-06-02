@@ -14,7 +14,7 @@
     justify-content: space-between;
     width: 100%;
     min-height: 8vh;
-    z-index: 9998;
+    z-index: 999;
     align-items: center;
     margin:auto;
     top: 0;
@@ -279,4 +279,136 @@
  list-style: none;
  font-family: 'Krub';
  color: white;
+}
+
+/* sign up modal */
+#signupmod{
+  background-color: rgba(255, 255, 255, 0.616);
+  backdrop-filter: blur(10px);
+  color: BLACK;
+  z-index:9998;
+}
+.modal-header p{
+  font-family: 'Krub';
+  font-size: 20px;
+}
+.form-group{
+  font-family: 'Krub';
+  font-size: 15px;
+}
+.form-group input{
+  padding: 1vw;
+  border-radius:100px;
+  border: none;
+  transition: ease 0.5s;
+}
+.form-group input:hover{
+  border: solid black 1px;
+}
+#block{
+  border: none;
+  border-radius: 100px;
+  text-decoration: none;
+  transition: ease .8s;
+  padding:10px;
+  color:black;
+  font-size:20px;
+  background-color: rgba(255, 255, 255, 0.575)
+}
+#block:hover{
+  background-color: white;
+  color: black;
+}
+.dialouge {
+  font-family: 'Krub';
+  font-size: 20px;
+}
+.loginbtn{
+  border: black;
+  border-style: solid;
+  border-radius: 100px;
+  text-decoration: none;
+  margin: 2vh;
+  transition: ease .8s;
+}
+.loginbtn:hover{
+  background-color: rgb(0, 0, 0);;
+}
+.loginbtn:hover #log{
+  color:rgb(255, 255, 255);
+  font-size: 25px;
+}
+#log{
+  font-family:'Raleway';
+  font-size:20px;
+  color:rgb(0, 0, 0);
+  padding:15px;
+  transition: ease .8s;
+}
+
+/*login modal */
+#modal2{
+  background-color: rgba(255, 255, 255, 0.616);
+  backdrop-filter: blur(10px);
+  color: BLACK;
+  z-index:9998;
+}
+/*
+.form-group{
+  font-family: 'Krub';
+  font-size: 15px;
+}
+.form-group input{
+  padding: 1vw;
+  border-radius:100px;
+  border: none;
+  transition: ease 0.5s;
+}
+.form-group input:hover{
+  border: solid black 1px;
+}
+.dialouge {
+  font-family: 'Krub';
+  font-size: 20px;
+}
+*/
+#logintop span{
+  font-family: 'Krub';
+  font-size: 20px;
+}
+.signinbtn{
+  border: black;
+  border-style: solid;
+  border-radius: 100px;
+  text-decoration: none;
+  margin: 2vh;
+  transition: ease .8s;
+}
+.signinbtn:hover{
+  background-color: rgb(0, 0, 0);;
+}
+.signinbtn:hover .signbtntxt{
+  color:rgb(255, 255, 255);
+  font-size: 25px;
+}
+.signbtntxt{
+  font-family:'Raleway';
+  font-size:20px;
+  color:rgb(0, 0, 0);
+  padding:15px;
+  transition: ease .8s;
+}
+#block2{
+  border: none;
+  border-radius: 100px;
+  text-decoration: none;
+  transition: ease .8s;
+  padding:10px;
+  color:black;
+  font-size:20px;
+  background-color: rgba(255, 255, 255, 0.575)
+}
+#block2:hover{
+  background-color: rgb(255, 255, 255);
+  color: black;
 }
