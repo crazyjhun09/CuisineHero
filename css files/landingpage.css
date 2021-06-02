@@ -287,6 +287,11 @@
   backdrop-filter: blur(10px);
   color: BLACK;
   z-index:9998;
+  width: 70%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 .modal-header p{
   font-family: 'Krub';
@@ -352,6 +357,11 @@
   backdrop-filter: blur(10px);
   color: BLACK;
   z-index:9998;
+  width: 70%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 /*
 .form-group{
