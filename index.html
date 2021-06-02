@@ -209,13 +209,11 @@
     
 </script>
 <script>
-    $(document).ready(function () {
-        $("#Feed").click(function () {
-            $("#LogFirst").text("You need to login first to continue.");
-        });
-        $("#Sign").click(function () {
-            $("#LogFirst").empty();
-        });
+    $('#Feed').on('hidden.bs.modal', function () {
+    $("#LogFirst").html("Login");
+    });
+    $("#Feed").click(function () {  
+    $("#LogFirst").html("You need to login first to continue.");
     });
     $('#block').prop('disabled', true);
     $('#pw1, #pw2').on('keyup', function () {
