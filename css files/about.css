@@ -46,7 +46,46 @@
 
 #row1{
     height: 100vh;
-    border: solid black;
+    color:black;
+}
+.title{
+    font-family:'Raleway';
+    font-size:15vw;
+}
+.animtext{
+    margin-top: 20px;
+    font-size:2vw;
+    font-family:'Krub';
+    animation: animation1 40s linear infinite;
+    filter: opacity(0.5);
+}
+.animtext2{
+    font-size:2vw;
+    font-family:'Krub';
+    animation: animation2 40s linear infinite;
+    filter: opacity(0.5);
+}
+@keyframes animation1{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+@keyframes animation2{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+.lerp{
+    margin-top: 80px;
+}
+.lerp span{
+    display: inline-block;
 }
 #row2{
     height: 100vh;

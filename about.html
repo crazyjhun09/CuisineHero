@@ -42,37 +42,40 @@
 </header>
 <body data-scroll-container>
     <div class="container-fluid">
-        <div class="row" id="row1" data-scroll-section>
-            <div class="col-12" >
-                <section >
-                    <p data-scroll>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum minus autem excepturi repellendus provident neque impedit amet reprehenderit, assumenda consectetur ipsam quas, unde fugiat tempore fuga maiores doloremque. Laboriosam, odit.
-                    </p>
-                </section>
+        <div class="row" id="row1" data-scroll-section data-scroll-speed="1">
+            <div class="col-12 animtext" data-scroll-section>
+                <p>grapefruit steaks eggplants eggs Kosher salt black pepper oil crabmeat Fish garlic jasmine rice banana fresh lemon soy sauce sugarcane vinegar brown sugar chicken vinegar bay leaves chicken legs</p>
+            </div>
+            <div class="col-12 text-center" data-scroll-section>
+                <div data-scroll class="lerp">
+                    <span class="font-weight-bold title" data-scroll  data-scroll-delay="2" data-scroll-speed="6">C</span>
+                    <span class="font-weight-bold title"  data-scroll  data-scroll-delay="1.9" data-scroll-speed="6">u</span>
+                    <span class="font-weight-bold title"  data-scroll  data-scroll-delay="1.9" data-scroll-speed="6">i</span>
+                    <span class="font-weight-bold title" data-scroll  data-scroll-delay="2" data-scroll-speed="6">s</span>
+                    <span class="font-weight-bold title" data-scroll  data-scroll-delay="1.5" data-scroll-speed="6">i</span>
+                    <span class="font-weight-bold title" data-scroll  data-scroll-delay="1.5" data-scroll-speed="6">n</span>
+                    <span class="font-weight-bold title" data-scroll  data-scroll-delay="2" data-scroll-speed="6">e</span>
+                    <span class="font-weight-bold title" data-scroll  data-scroll-delay="1.0" data-scroll-speed="6">H</span>
+                    <span class="font-weight-bold title" data-scroll  data-scroll-delay="1.0" data-scroll-speed="6">e</span>
+                    <span class="font-weight-bold title" data-scroll  data-scroll-delay="2" data-scroll-speed="6">r</span>
+                    <span class="font-weight-bold title" data-scroll  data-scroll-delay=".6" data-scroll-speed="6">o</span>
+                </div>
+            </div>
+            <div class="col-12 animtext2" data-scroll>
+                <p data-scroll>grapefruit steaks eggplants eggs Kosher salt black pepper oil crabmeat Fish garlic jasmine rice banana fresh lemon soy sauce sugarcane vinegar brown sugar chicken vinegar bay leaves chicken legs</p>
             </div>
         </div>
         <div class="row" id="row2" data-scroll-section>
             <div class="col-12" >
                 <section >
-                    <p  data-scroll data-scroll-direction="horizontal" data-scroll-speed="1" data-scroll-class="appear" data-scroll-repeat="true">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum minus autem excepturi repellendus provident neque impedit amet reprehenderit, assumenda consectetur ipsam quas, unde fugiat tempore fuga maiores doloremque. Laboriosam, odit.
-                    </p>
-                    <p data-scroll data-scroll-speed="2" data-scroll-direction="vertical">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum minus autem excepturi repellendus provident neque impedit amet reprehenderit, assumenda consectetur ipsam quas, unde fugiat tempore fuga maiores doloremque. Laboriosam, odit.
-                    </p>
+                    
                 </section>
             </div>
         </div>
     </div>
 </body>
+
 </html>
-<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
-<script>
-    const scroller = new LocomotiveScroll({
-  el: document.querySelector('[data-scroll-container]'),
-  smooth: true
-});
-</script>
 <script>
     var prevScrollpos = window.pageYOffset;
     window.onscroll = function() {
@@ -84,11 +87,14 @@
       }
       prevScrollpos = currentScrollPos;
     }
-
-    import LocomotiveScroll from "https://cdn.skypack.dev/locomotive-scroll";
-
+</script>
+<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+<script>
     const scroller = new LocomotiveScroll({
-    el: document.querySelector("[data-scroll-container]"),
-    smooth: true
+  el: document.querySelector('[data-scroll-container]'),
+  smooth: true,
+  smartphone: {
+        smooth: true
+    }
 });
 </script>
