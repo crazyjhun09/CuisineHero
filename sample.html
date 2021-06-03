@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        back
+    }
+    .section{
+        height:100vh;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="section" data-background-color="#16a085">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit veritatis delectus perferendis soluta officiis, adipisci rerum omnis ea quidem a quod officia temporibus, necessitatibus mollitia, libero magni saepe quibusdam cupiditate.
+        </div>
+        <div class="section" data-background-color="black">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat est commodi odit praesentium aperiam laborum tempore expedita provident fuga repellendus, ut soluta reprehenderit magnam corporis adipisci architecto, rem ex animi?
+        </div>
+    </div>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/in-view@0.6.1/dist/in-view.min.js"></script>
+<script>
+    var $target = $('.container');
+    inView('.section').on('enter', function(el){
+    var color = $(el).attr('data-background-color');
+    $target.css('background-color', color );
+</script>
